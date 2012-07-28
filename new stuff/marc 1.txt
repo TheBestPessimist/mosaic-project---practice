@@ -1,0 +1,67 @@
+Two main features:
+
+1) conditions for moving tasks from a machine
+
+2) conditions for selecting a destination machine
+
+JSON is used to represent the conditions!
+
+{
+    "from_machine":
+        {
+            "condition": "if (resource_load>90 && monetary_cost>0.8) return true else return false",
+            single_task_variables:
+                [ "resource_load", "monetary_cost"],
+
+        },
+    "to_machine":
+        {
+            "condition": "if (resource_load==min_resource_load && monetary_cost==min_monetary_cost)",
+            single_task_variables:
+                [ "resource_load","monetary_cost" ],
+            all_tasks_variables:
+                [ "min_resource_load","min_monetary_cost" ],
+        }
+}
+
+NOTE:
+    - condition: any valid Groovy boolean expression
+    - single_task_variables: can occur in both from_machine and to_machine
+	- all_tasks_variables: CANNOT occur in from_machine
+	
+resource_load (CPU, memory, disk, ...)
+
+monetary_cost ($)
+
+transport_cost (throughput in s)
+
+resource_execution_cost (s)
+    - all_tasks_variables: CANNOT occur in from_machine
+
+#################### min_resource_load : off all nodes; computed via the computeLoad() (in Node) methods
+
+################### max_resource_load : off all nodes; computed via the computeLoad() (in Node) methods
+
+############## min_resource_load_id : off all nodes; the index of the resource with the min load
+
+####################### max_resource_load_id : off all nodes; the index of the resource with the min load
+
+max_resource_load_threshold : fixed value taken from a configuration file
+
+min_resource_load_threshold : fixed value taken from a configuration file
+
+############## min_transport_cost : given a partition or a vector of partitions, find which node provides the least transport cost. This variable holds the actual transport cost (use computePartitionRelocationCost() in AlgorithmUtil)
+
+############### max_transport_cost : given a partition or a vector of partitions, find which node provides the most expensive transport cost. This variable holds the actual transport cost (use computePartitionRelocationCost() in AlgorithmUtil)
+
+############### min_transport_cost_resource_id : the id of the resource found for min-transport-cost
+
+############# max_transport_cost_resource_id : the id of the resource found for min-transport-cost
+
+############ min_total_resource_execution_time : cannot be computed with the methods you have, but needs to be there for future references
+
+############ max_total_resource_execution_time : cannot be computed with the methods you have, but needs to be there for future references
+
+######### min_total_resource_execution_time_id : the id for the min_total_resource_execution_time
+
+########### max_total_resource_execution_time_id : the id for the max_total_resource_execution_time

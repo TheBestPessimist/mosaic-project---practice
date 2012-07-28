@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="libraries/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="libraries/asm-3.2.jar"/>
+	<classpathentry kind="lib" path="libraries/asm-analysis-3.2.jar"/>
+	<classpathentry kind="lib" path="libraries/asm-commons-3.2.jar"/>
+	<classpathentry kind="lib" path="libraries/asm-tree-3.2.jar"/>
+	<classpathentry kind="lib" path="libraries/asm-util-3.2.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="libraries/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="libraries/groovy-1.8.6.jar"/>
+	<classpathentry kind="lib" path="libraries/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="libraries/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="libraries/platform_manager-20081208.jar"/>
+	<classpathentry kind="lib" path="libraries/JavaPlot.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
