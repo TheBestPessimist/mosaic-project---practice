@@ -1,0 +1,6 @@
+resource_load (CPU, memory, disk): exists for both Node and Partition, so which one to use?
+
+monetary_cost ( $ ), 
+transport_cost (throughput in s), 
+resource_execution_cost ( s ): DO NOT EXIST =>
+=> need to be implemented. 

@@ -1,5 +1,4 @@
 package otherClasses;
-
 import org.apache.commons.lang.NotImplementedException;
 import org.apache.log4j.Logger;
 import groovy.lang.Binding;
@@ -9,29 +8,31 @@ import allTasksVariablesComputator.AllTasksVariablesComputator;
 public class InterpretGroovy {
 	
 	private static double configuration_file_value = 0;
+	
 	static Logger log = Logger.getLogger(MakeJson.class.getName());
 	
-	
-	
-	@Deprecated
 	/**
 	 * Interpret the groovy code sent through the parameter
 	 * @ BETA!!!!!!!!!!!!!!	<- it has dummy values!
 	 * @author Lucian Stefanoaica 
 	 * @param condition String containing the groovy code to be evaluated.
 	 * @return Value of the evaluated groovy condition.
-	 * @Deprecated
 	 */
+	
 	public static boolean interpretGroovy(String condition) throws Exception {
-		
 		
 		Boolean result = null;
 		try {
 			PopulateBean pb = new PopulateBean();
+			
 			GenerateAllTasksVariables ATV = new GenerateAllTasksVariables();
+			
 			AllTasksVariablesComputator ATVC = new AllTasksVariablesComputator(ATV.getAllNodes());
+			
 			Binding binding = new Binding();
+			
 			GroovyShell shell = new GroovyShell(binding);
+			
 			for (String s : pb.getGigaBean().getFrom_machine().getSingle_task_variables()) {
 				
 				if (s.compareTo("resource_load") == 0)
