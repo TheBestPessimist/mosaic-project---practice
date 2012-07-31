@@ -36,5 +36,5 @@ a node and the respective load/cost.
 MakeJson is used to create a json object from a bean. (this is done pretty straight forward)
 
 
-interpret groovy====>>>>> description in the class
+interpret groovy====>>>>> description in the class implemented by Luci
 
